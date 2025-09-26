@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact-form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  .navbar {
+        background-color: #f2ece4;
+        height: 80px;
+        margin: 20px;
+        border-radius: 16px;
+        padding: 8px;
+    }
+
+    .navbar-brand {
+        font-weight: 500;
+        font-size: 24px;
+        color: #000;
+        transition: 0.3s color;
+    }
+
+    .login-button {
+        background-color: #000;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 50px;
+        padding: 8px 20px;
+        text-decoration: none;
+        transition: 0.3s background-color;
+    }
+
+    .navbar-brand:hover {
+
+        color: #fff;
+    }
+
+    .login-button:hover {
+        background-color: white;
+        color: #000;
+
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 20px;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #000;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: lightblue;
+    }
+
+    .dropdown-menu a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .dropdown-menu a .d-flex {
+        transition: all 0.5s;
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(1) a:hover .d-flex {
+        background-color: var(--bs-warning-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(2) a:hover .d-flex {
+        background-color: var(--bs-danger-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(3) a:hover .d-flex {
+        background-color: var(--bs-success-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(4) a:hover .d-flex {
+        background-color: var(--bs-secondary-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(5) a:hover .d-flex {
+        background-color: var(--bs-tertiary-bg);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(6) a:hover .d-flex {
+        background-color: var(--bs-info-bg-subtle);
+    }
+
+    @media only screen and (min-width: 992px) {
+        .dropdown-menu {
+            width: 55vw;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+    }
+
+
+    @media (min-width: 991px) {
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+            visibility: visible;
+        }
+
+    }
+  body {
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .contact-box {
+    border-radius: 17px;
+    padding: 40px;
+    background: white;
+    box-shadow: grey;
+  }
+
+  .btn-submit {
+    color: white;
+    background: rgb(173, 77, 77);
+    font-weight: bold;
+  }
+
+  .btn-submit:hover {
+    background: rgb(173, 77, 77);
+  }
+
+  h2 {
+    color: rgb(173, 77, 77);
+    font-weight: bold
+  }
+
+  h4 {
+    color: rgb(173, 77, 77);
+    font-weight: bold
+  }
+
+
+  iframe {
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+    border: brown solid 1px;
+  }
+
+  .map h3 {
+    color: rgb(173, 77, 77);
+  }
+      footer {
+        background-color: #f2ece4;
+        color: black;
+        padding: 40px 0 20px;
+        margin-top: 20px;
+
+    }
+     header {
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+.logo {
+  max-width: 200px; /* or any width you want */
+  height: 100px;
+ }
+
+    footer h5 {
+        color: black;
+        margin-bottom: 15px;
+    }
+
+    footer a {
+        color: black;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: grey;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin-right: 15px;
+        color: black;
+        transition: color 0.3s;
+    }
+
+
+    .social-icons a:hover {
+        color: #0d6efd;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 20px;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #aaa;
+    }
+    
+</style>
+
+<body>
+ <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+   
+  <a class="navbar-brand me-auto" href="#"><img src="./Asset/aaaaaaalogooooooo.PNG back.PNG" alt="Jensen Logo" class="logo"></a>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+          </li>
+<li class="nav-item dropdown">
+
+  <a class="nav-link" href="./category.html">Categories <i class="fa-solid fa-caret-down"></i></a>
+
+  
+  <div class="dropdown-menu px-3 rounded-3 border-0 shadow">
+    <div class="row">
+
+      <div class="col-sm-6">
+        <a href="./category.html#metal">
+          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+            <div class="icon px-3 bg-warning-subtle rounded-3 fs-1">
+              <i class="bi bi-palette"></i>
+            </div>
+            <div class="text ps-3">
+              <h5>Metal Wall Art</h5>
+              <div>Bold, striking, and timeless — metal wall art adds depth and character to any space.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6">
+        <a href="./category.html#wallpaper">
+          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+            <div class="icon px-3 bg-danger-subtle rounded-3 fs-1">
+              <i class="bi bi-brush"></i>
+            </div>
+            <div class="text ps-3">
+              <h5>Wallpapers</h5>
+              <div>From subtle textures to vibrant patterns, our wallpapers transform plain walls into stunning backdrops.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6">
+        <a href="./category.html#photo">
+          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+            <div class="icon px-3 bg-success-subtle rounded-3 fs-1">
+              <i class="bi bi-image"></i>
+            </div>
+            <div class="text ps-3">
+              <h5>Photo Frames</h5>
+              <div>Capture your memories in elegant frames that complement your walls and highlight your moments.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6">
+        <a href="./category.html#mirror">
+          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+            <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+              <i class="bi bi-square"></i>
+            </div>
+            <div class="text ps-3">
+              <h5>Mirrors</h5>
+              <div>Stylish and versatile mirrors that add light, depth, and elegance to any room.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+
+      <div class="col-sm-6">
+        <a href="./category.html#shelves">
+          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+            <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+              <i class="bi bi-grid"></i>
+            </div>
+            <div class="text ps-3">
+              <h5>Wall Shelves</h5>
+              <div>Practical meets stylish — shelves keep your space organized with a modern touch.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6">
+        <a href="./category.html#animals">
+          <div class="d-flex align-items-center py-3 px-1 rounded-3">
+            <div class="icon px-3 bg-primary-subtle rounded-3 fs-1">
+              <i class="bi bi-shield"></i>
+            </div>
+            <div class="text ps-3">
+              <h5>Wall Mounted Animals</h5>
+              <div>Unique and artistic mounted animal designs adding rustic charm and bold touch.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</li>
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="./about.html">About us</a>
+          </li>
+
+   
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="./form.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+ 
+    <a href="./login.html" class="login-button">Login</a>
+
+ 
+    <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+  <div class="container py-5">
+    <div class="row align-items-center g-4">
+
+
+      <div class="col-lg-6 text-center" data-aos="fade-right">
+        <img src="./Decorating with Botanical Art (1).png" alt="Cartoon" class="img-fluid"
+          style="max-width: 300px; height: auto;">
+
+        <h3 class="mt-3 text-muted fw-bold text-primary text-center mb-3">Let’s Decorate Your Walls</h3>
+      </div>
+
+      <div class="col-lg-6 border" data-aos="fade-left">
+        <div class="contact-box">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <h4 class="text-center">“We’d love to hear from you ✨”</h4>
+          <form onsubmit="return validateForm()">
+            <div class="mb-3">
+              <input type="text" id="name" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <input type="email" id="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <textarea id="message" class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class=" map container mt-5">
+      <div class="row align-items-center">
+
+        <div class="col-md-6 mb-4">
+          <h3 class="fw-bold mb-3">Jensen Wall Decor</h3>
+          <h5>❗123 Decorative Street,Art,City,USA</h5>
+          <a href="contact@jensenwalldecor.com">
+            <h5><strong>Email:</strong> <a href="./form.html">contact@jensenwalldecor.com</h5>
+          </a>
+          <h5>↗<strong>Phone:</strong> +92 300 1234567</h5>
+        </div>
+
+
+        <div class="col-md-6 mb-4 map" data-aos="zoom-in">
+          <h3 class="mb-3">Find Us on Map</h3>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.741406664732!2d67.0305565!3d24.8614628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33bb5ba6f4b5d%3A0x61d29aa4b66c9f!2sABC%20Street%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1694959692184"
+            style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+      </div>
+    </div>
+    </div>
+ <section class="footer ">
+
+        <footer>
+            <div class="container">
+                <div class="row px-3">
+                    <!-- Brand -->
+                    <div class="col-md-4 mb-4">
+                        <h5><span style="color:black;">WallDecor</span></h5>
+                        <p style="font-size: 14px;">At Jensen Wall Decor, we believe every wall tells a story. From timeless art pieces to modern accents, our collections are designed to transform spaces into reflections of your personality and style. With a commitment to quality and creativity, we’re here to help you create a home that inspires you every day.</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-md-2 mb-4 ms">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./category.html">Categories</a></li>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./form.html">Contact</a></li>
+                           
+                        </ul>
+                    </div>
+                    <!-- Vehicle Categories -->
+                    <div class="col-md-3 mb-4">
+                        <h5>Categories</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./category.html#metal">Metal Art</a></li>
+                            <li><a href="./category.html#wallpaper">Wallpapers</a></li>
+                            <li><a href="./category.html#photo">Photo Frames</a></li>
+                            <li><a href="./category.html#mirror">Mirror Art</a></li>
+                            <li><a href="./category.html#shelves">Wall Shelves</a></li>
+                            <li><a href="./category.html#animals">Mounted Animals</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div class="col-md-3 mb-4">
+                        <h5>Contact Us</h5>
+                        <p>123 Jesen Wall Decor<br>Los Angeles, CA 90001</p>
+                        <p>Phone: (555) 123-4567</p>
+                        <p>Email: info@Jensen.com</p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>© 2025 Jesen Wall Decor. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+    <script>
+      function validateForm() {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+          alert("Please fill all fields!");
+          return false;
+        } else {
+          alert("Thank you " + name + "! Your message has been sent.");
+          document.querySelector("form").reset();
+          return false;
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

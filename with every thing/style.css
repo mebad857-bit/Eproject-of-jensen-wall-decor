@@ -1,0 +1,688 @@
+  .navbar {
+        background-color: #f2ece4;
+        height: 80px;
+        margin: 20px;
+        border-radius: 16px;
+        padding: 8px;
+        
+    }
+.btn btn-sm btn-outline-secondary add-to-wish{
+  width: 50px;
+  gap: 30px;
+}
+    .navbar-brand {
+        font-weight: 500;
+        font-size: 24px;
+        color: #000;
+        transition: 0.3s color;
+    }
+.cardPopout .btn { min-height: 40px; 
+
+font-size: 12px;
+padding: 10px;}
+
+    .login-button {
+        background-color: #000;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 50px;
+        padding: 8px 20px;
+        text-decoration: none;
+        transition: 0.3s background-color;
+    }
+
+    .navbar-brand:hover {
+
+        color: #fff;
+    }
+
+    .login-button:hover {
+        background-color: white;
+        color: #000;
+
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 20px;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #000;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: lightblue;
+    }
+
+    .dropdown-menu a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .dropdown-menu a .d-flex {
+        transition: all 0.5s;
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(1) a:hover .d-flex {
+        background-color: var(--bs-warning-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(2) a:hover .d-flex {
+        background-color: var(--bs-danger-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(3) a:hover .d-flex {
+        background-color: var(--bs-success-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(4) a:hover .d-flex {
+        background-color: var(--bs-secondary-bg-subtle);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(5) a:hover .d-flex {
+        background-color: var(--bs-tertiary-bg);
+    }
+
+    .dropdown-menu .col-sm-6:nth-child(6) a:hover .d-flex {
+        background-color: var(--bs-info-bg-subtle);
+    }
+
+    @media only screen and (min-width: 992px) {
+        .dropdown-menu {
+            width: 55vw;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+    }
+
+
+    @media (min-width: 991px) {
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+            visibility: visible;
+        }
+      }
+   *:not(style, head),
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --card-height: 65vh;
+      --card-width: calc(var(--card-height) / 1.5);
+    }
+
+
+    .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-radius: 1rem;
+}
+
+.hero-text .highlight {
+  color: #0072ff; /* Jensen accent color */
+}
+
+.hero-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.hero-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.hero-img img {
+  max-width: 90%;
+  transition: transform 0.4s ease;
+}
+.hero-img img:hover {
+  transform: scale(1.03);
+}
+
+
+
+  
+
+
+
+    
+   
+
+    
+
+   
+    h1.section-title {
+      margin: 30px 0 10px;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+
+
+
+
+    
+
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 50px;
+      background: linear-gradient(45deg, hwb(0 51% 19%), #dd2476 );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .swiper {
+      padding: 40px 0;
+    }
+
+    .cardPopout {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform .3s, box-shadow .3s;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+
+    .cardPopout::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      z-index: -1;
+      border-radius: 15px;
+      background: linear-gradient(45deg, lab(97.95% 0.18 -0.49), lab(96.41% 1 0.34), lch(62.7% 54.78 293.73), hsl(276, 40%, 72%));
+    }
+
+    .cardPopout img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .cardPopout h2 {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .cardPopout h4 {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 0.3rem;
+    }
+
+    .cardPopout p {
+      font-size: 0.85rem;
+      padding: 0 10px;
+      min-height: 40px;
+    }
+
+    .price {
+      font-weight: 700;
+      margin-top: 5px;
+      background: linear-gradient(45deg, #ff512f, #24c6dc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1rem;
+    }
+
+    .cardPopout a {
+      display: inline-block;
+      margin: 10px 0 15px 0;
+      padding: 6px 14px;
+      background: linear-gradient(45deg, hsl(323, 100%, 59%), #24c6dc);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      transition: background .3s;
+    }
+
+    .cardPopout:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #dd2476;
+    }
+
+
+
+     :root {
+      --accent1: #007bff;
+      --accent2: #ff00aa;
+      --card-radius: 12px;
+    } 
+
+    
+
+    .product-card {
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      transition: transform .22s ease, box-shadow .22s ease;
+      background: #fff;
+      border: 1px solid rgba(15, 23, 42, 0.04);
+
+      background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(135deg, hwb(223 96% 1%), #ee0979) border-box;
+        
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .product-card .card-img-top {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    */
+    
+
+    .price {
+      color: var(--accent1);
+      font-weight: 700;
+    }
+
+    
+
+    
+    @media (max-width:767px) {
+      header.hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .product-card .card-img-top {
+        height: 140px;
+      }
+    }
+
+
+    .cardPopout img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .cardPopout h2 {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .price {
+      font-weight: 700;
+      color: #dd2476;
+    }
+
+    .cardPopout a.btn {
+      margin-top: .5rem;
+    }
+    
+
+    
+
+    @property --rotate {
+      syntax: "<angle>";
+      initial-value: 132deg;
+      inherits: false;
+    }
+
+    
+    .card-img-top {
+  height: 250px;       
+  object-fit: cover;   
+    }
+
+
+    .wrapper .outer {
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper .card {
+      background: #fff;
+      width: 100%;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      justify-content: space-between;
+      border-radius: 100px 20px 20px 100px;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+      animation: animate 15s linear infinite;
+      animation-delay: calc(3s * var(--delay));
+    }
+
+    .outer:hover .card {
+      animation-play-state: paused;
+    }
+
+    .wrapper .card:last-child {
+      animation-delay: calc(-3s * var(--delay));
+    }
+
+    @keyframes animate {
+      0% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+      }
+
+      5%,
+      20% {
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+      }
+
+      25%,
+      40% {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0%) scale(1);
+      }
+
+      45%,
+      60% {
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.7);
+      }
+
+      65%,
+      100% {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.5);
+      }
+    }
+
+    .card .content {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrapper .card .img {
+      height: 90px;
+      width: 90px;
+      position: absolute;
+      left: -5px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .card .img img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card .details {
+      margin-left: 80px;
+    }
+
+    .details span {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .card a {
+      text-decoration: none;
+      padding: 7px 18px;
+      border-radius: 25px;
+      color: #fff;
+      background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+      transition: all 0.3s ease;
+    }
+
+    .card a:hover {
+      transform: scale(0.94);
+    }
+
+    .carousel-cards {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+.hero-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.hero-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+ header {
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+.logo {
+  max-width: 200px; /* or any width you want */
+  height: 100px;
+ }
+
+
+
+.hero-img img {
+  max-width: 90%;
+  transition: transform 0.4s ease;
+}
+.hero-img img:hover {
+  transform: scale(1.03);
+} */
+
+  .carousel-item img{width:100%;height:90vh;object-fit:cover;}
+  #heroCarousel,
+.carousel-inner,
+.carousel-item {
+  width: 100vw;  /* full screen width */
+}
+
+.carousel-item img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+/* Carousel images ko fixed height aur responsive banane ke liye */
+#heroCarousel .carousel-item img {
+  width: 100%;
+  height: 1000px;         
+  object-fit: cover;      
+}
+
+#heroCarousel .carousel-caption {
+  bottom: 20%;
+}
+
+/* Mobile view pe height chhoti */
+@media (max-width: 768px) {
+  #heroCarousel .carousel-item img {
+    height: 300px;
+  }
+}
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  margin-left: 120px;
+
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.1); 
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    text-align: left;
+    border: none;
+    background: #007BFF;
+    color: white;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+.sidebar button:hover {
+    background: #0056b3;
+    transform: translateX(4px);
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        border-right: none;
+        box-shadow: none;
+    }
+  
+}
+
+  footer {
+        background-color: #f2ece4;
+        color: black;
+        padding: 40px 0 20px;
+        margin-top: 20px;
+
+    }
+
+    footer h5 {
+        color: black;
+        margin-bottom: 15px;
+    }
+
+    footer a {
+        color: black;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: grey;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin-right: 15px;
+        color: black;
+        transition: color 0.3s;
+    }
+
+
+    .social-icons a:hover {
+        color: #0d6efd;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 20px;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #aaa;}
+    /* }.cardPopout {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  height: 100%;
+}
+
+.cardPopout img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.row.g-2 .btn {
+  font-size: 0.85rem;
+  padding: 5px;
+} */
+
+
+.cardPopout {
+  /* Optional: Set a fixed height for the card */
+  height: 500px; /* Adjust as necessary */
+}
+
+.cardPopout img {
+  width: 100%; /* Ensures the image covers the width of the card */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* This will maintain aspect ratio while covering the area */
+  border-radius: 10px; /* Optional: add rounded corners */
+}

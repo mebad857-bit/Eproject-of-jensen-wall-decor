@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <style>
+    /* Navbar */
+    .navbar {
+      background-color: #f2ece4;
+      height: 80px;
+      margin: 20px;
+      border-radius: 16px;
+      padding: 8px;
+    }
+    .logo { max-width: 200px; height: 100px; }
+    .navbar-brand { font-weight: 500; font-size: 24px; color: #000; }
+    .navbar-brand:hover { color: #fff; }
+    .login-button {
+      background-color: #000; color: #fff; font-size: 14px;
+      border-radius: 50px; padding: 8px 20px; text-decoration: none;
+    }
+    .login-button:hover { background-color: white; color: #000; }
+    .nav-link { color: #000; font-weight: 500; position: relative; }
+    .nav-link:hover, .nav-link.active { color: lightblue; }
+
+    /* Footer */
+    footer { background-color: #f2ece4; color: black; padding: 40px 0 20px; margin-top: 20px; }
+    footer h5 { color: black; margin-bottom: 15px; }
+    footer a { color: black; text-decoration: none; }
+    footer a:hover { color: grey; }
+    .social-icons a { font-size: 20px; margin-right: 15px; color: black; transition: color 0.3s; }
+    .social-icons a:hover { color: #0d6efd; }
+    .footer-bottom { border-top: 1px solid #333; margin-top: 20px; padding-top: 15px; text-align: center; font-size: 14px; color: #aaa; }
+  </style>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand me-auto" href=".html">
+      <img src="./Asset/aaaaaaalogooooooo.PNG back.PNG" alt="Jensen Logo" class="logo">
+    </a>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link" href=".html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="category.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href="login.html" class="login-button">Login</a>
+    <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Sign Up Form -->
+<main class="flex-fill d-flex align-items-center justify-content-center">
+  <div class="card p-4 shadow w-100" style="max-width: 450px;">
+    <h3 class="text-center mb-3"><i class="bi bi-person-plus me-2"></i> Sign Up</h3>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter your full name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" placeholder="Choose a username">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="Create a password">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" placeholder="Re-enter password">
+      </div>
+      <button type="submit" class="btn btn-success w-100">
+        <i class="bi bi-check-circle me-2"></i> Create Account
+      </button>
+    </form>
+    <p class="mt-3 text-center">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row px-3">
+      <div class="col-md-4 mb-4">
+        <h5>WallDecor</h5>
+        <p style="font-size: 14px;">At Jensen Wall Decor, we believe every wall tells a story. From timeless art pieces to modern accents, our collections are designed to transform spaces into reflections of your personality and style. With a commitment to quality and creativity, we’re here to help you create a home that inspires you every day.</p>
+      </div>
+      <div class="col-md-2 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href=".html">Home</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="form.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h5>Categories</h5>
+        <ul class="list-unstyled">
+          <li><a href="category.html#metal">Metal Art</a></li>
+          <li><a href="category.html#wallpaper">Wallpapers</a></li>
+          <li><a href="category.html#photo">Photo Frames</a></li>
+          <li><a href="category.html#mirror">Mirror Art</a></li>
+          <li><a href="category.html#shelves">Wall Shelves</a></li>
+          <li><a href="category.html#animals">Mounted Animals</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h5>Contact Us</h5>
+        <p>123 Jesen Wall Decor<br>Los Angeles, CA 90001</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: info@Jensen.com</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Jesen Wall Decor. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
